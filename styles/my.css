@@ -1,0 +1,19 @@
+#cover {
+    background: #ffdb4d;
+    }
+#cover h2{
+    background: rgba(0,0,0,0);
+    color: #000;
+    padding-bottom: 30px;
+    }
+
+.slide_qfox {
+    background: #fff url(pictures/qfox.png) center no-repeat;
+    background-size: 100%;
+    text-shadow: 0 0 3px #fff
+    }
+
+.slide_gist {
+    background: #fff url(pictures/gist.png) center no-repeat;
+    background-size: 75%;
+    }

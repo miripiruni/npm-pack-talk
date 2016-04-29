@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Как оформить npm пакет?</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/material/styles/screen-16x10.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/my.css">
+    <link rel="stylesheet" href="./styles/odometer-theme-minimal.css" />
+
+    <!--<link rel="stylesheet" href="highlight.js/styles/default.css">-->
+    <!--<script src="highlight.js/highlight.pack.js"></script>-->
+    <!--<script>hljs.initHighlightingOnLoad();</script>-->
+    <script src="./scripts/tweenlite.min.js"></script>
+    <script src="./scripts/odometer.min.js"></script>
+</head>
+<body class="shower list">
+    <header class="caption">
+        <h1>Как оформить npm-пакет?</h1>
+        <p>Yandex</p>
+    </header>
+
+    <section class="slide" id="cover">
+        <h2 style="font-weight: bold;">Как оформить<br>npm-пакет?</h2>
+
+        <p class="foot-note" style="color: #000">Вячеслав Олиянчук</p>
+    </section>
+
+    <section class="slide">
+    </section>
+
+    <section class="slide">
+        <h2>それは何ですか v6.4.0</h2>
+    </section>
+
+    <section class="slide">
+        <p>それは何ですか v6.4.0</p>
+        <pre>
+            <code>lib/</code>
+            <code>tests/</code>
+            <code>index.js</code>
+            <code>package.json</code>
+            <code>README.md</code>
+            <code class="next">demo/ <span class="gray">(gh-pages)</span></code>
+            <code class="next">examples/</code>
+            <code class="next">documentation/</code>
+        </pre>
+        <div class="baloon next">
+            <ul>
+                <li class="next"><a href="https://github.com/bem/bem-xjst/blob/master/docs/ru/7-runtime.md#apply" target="_blank">Сигнатуры методов</a></li>
+                <li class="next"><a href="https://github.com/nodules/asker#quick-start" target="_blank">Основной способ использования</a></li>
+                <li class="next"><a href="https://github.com/nodules/susanin#examples" target="_blank">Примеры</a></li>
+                <li class="next">Пояснения почему так</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide" style="background: #fff
+        url(pictures/kristen-nygaard.jpg) top right no-repeat; background-size: contain;">
+        <p style="position: absolute; bottom: 5%; width: 40%; text-align: right;
+            line-height: 1.5em; font-size: 0.75em;"><q>“Программировать значит понимать.”</q><br>Кристен Нюгард</p>
+    </section>
+
+    <section class="slide">
+        <p>それは何ですか v6.4.0</p>
+        <pre>
+            <code>lib/</code>
+            <code>tests/</code>
+            <code>demo/ <span class="gray">(gh-pages)</span></code>
+            <code>examples/</code>
+            <code>documentation/</code>
+            <code>package.json</code>
+            <code>index.js</code>
+            <code>README.md</code>
+        </pre>
+    </section>
+
+    <section class="slide" style="background: #fff url(pictures/lights-and-belts.jpg) center no-repeat; background-size: cover;">
+    </section>
+    <section class="slide" style="background: #fff url(pictures/tests-and-docs.jpg) center no-repeat; background-size: cover;">
+    </section>
+
+    <section class="slide">
+        <p>それは何ですか v6.4.0</p>
+        <pre>
+            <code>lib/</code>
+            <code>test/</code>
+            <code>demo/ <span class="gray">(gh-pages)</span></code>
+            <code>examples/</code>
+            <code>documentation/</code>
+            <code>package.json</code>
+            <code>index.js</code>
+            <code>README.md</code>
+            <code class="next">CHANGELOG.md</code>
+        </pre>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="padding-left: 0; padding-right: 0; font-size: 3.5em">major.minor.patch</h2>
+        <h2 class="shout next" style="padding-left: 0; padding-right: 0; font-size: 3.5em">breaking.feature.bugfix</h2>
+        <p><a href="http://semver.org/">semver.org</a></p>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout" style="padding-left: 0; padding-right: 0; font-size: 3.5em">それは  v<span class="odometr"></span>.<span class="odo-fix">0</span></h2>
+        <div class="odo-updater" onclick="odoupdater();"></div>
+        <script>
+            window.odometerOptions = {
+                selector: '.odometr', // Change the selector used to automatically find things to be animated
+                format: 'd.d', // Change how digit groups are formatted, and how many digits are shown after the decimal point
+                duration: 3000, // Change how long the javascript expects the CSS animation to take
+                theme: 'minimal', // Specify the theme (if you have more than one theme css file on the page)
+                animation: 'count' // Count is a simpler animation method which just increments the value,
+                // use it when you're looking for something more subtle.
+            };
+
+            var el = document.querySelector('.odometr');
+
+            var od = new Odometer({
+                el: el,
+                value: 1.2
+
+                // Any option (other than auto and selector) can be passed in here
+                // format: '',
+                // theme: 'digital'
+            });
+
+            function odoupdater() {
+                od.update(od.valueOf().value + 0.3);
+
+                return true;
+            }
+
+        </script>
+    </section>
+
+    <section class="slide">
+        <p><code>npm <mark>WARN</mark> deprecated tap-consumer@0.0.1: This module is not supported. Please use 'tap' instead.</code></p>
+        <p class="next"><code>npm <mark>WARN</mark> deprecated lodash@0.9.2: Grunt needs your help! See https://github.com/gruntjs/grunt/issues/1403.</code></p>
+        <p class="next"><code>npm <mark>WARN</mark> deprecated jade@0.26.3: Jade has been renamed to pug, please install the latest version of pug instead of jade</code></p>
+        <p class="next"><a href="https://docs.npmjs.com/cli/deprecate" target="_blank">npm deprecate</a></p>
+    </section>
+
+
+    <section class="slide">
+        <p>それは何ですか v6.4.0</p>
+        <pre>
+            <code>lib/</code>
+            <code>test/</code>
+            <code>demo/ <span class="gray">(gh-pages)</span></code>
+            <code>examples/</code>
+            <code>documentation/</code>
+            <code>package.json</code>
+            <code>index.js</code>
+            <code>README.md</code>
+            <code>CHANGELOG.md</code>
+            <code class="next"><s>.npmignore</s></code>
+            <code class="next">.github/pull_request_template.md</code>
+        </pre>
+    </section>
+
+    <section class="slide" style="background: url(pictures/contrib.png) center no-repeat; background-size: contain">
+    </section>
+
+    <section class="slide" style="background: url(pictures/contrib2.png) center no-repeat; background-size: contain">
+    </section>
+
+    <section class="slide">
+        <p>それは何ですか v6.4.0</p>
+        <pre>
+            <code>lib/</code>
+            <code>test/</code>
+            <code>demo/ <span class="gray">(gh-pages)</span></code>
+            <code>examples/</code>
+            <code>documentation/</code>
+            <code>package.json</code>
+            <code>index.js</code>
+            <code>README.md</code>
+            <code>CHANGELOG.md</code>
+            <code><s>.npmignore</s></code>
+            <code>.github/pull_request_template.md</code>
+            <code class="next">CONTRIBUTION.md</code>
+        </pre>
+    </section>
+
+
+    <section class="slide" style="background: #fff url(pictures/tnx.png) bottom right
+        no-repeat; background-size: 50%;">
+        <h2>Благодарю за внимание</h2>
+        <p><a href="https://twitter.com/miripiruni/" style="color: #000;">@miripiruni</a></p>
+        <p><a href="mailto:miripiruni@yandex-team.ru" style="color: #000;">miripiruni@yandex-team.ru</a></p>
+    </section>
+
+    <section class="slide">
+        <p>それは何ですか v6.4.0</p>
+        <pre>
+            <code>lib/</code>
+            <code>test/</code>
+            <code>demo/ <span class="gray">(gh-pages)</span></code>
+            <code>examples/</code>
+            <code>documentation/</code>
+            <code>package.json</code>
+            <code>index.js</code>
+            <code>README.md</code>
+            <code>CHANGELOG.md</code>
+            <code><s>.npmignore</s></code>
+            <code>.github/pull_request_template.md</code>
+            <code>CONTRIBUTION.md</code>
+        </pre>
+    </section>
+
+    <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+    <!--<div class="progress"></div>-->
+    <script src="shower/shower.min.js"></script>
+    <!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+    <!-- Photos by John Carey, fiftyfootshadows.net -->
+</body>
+</html>

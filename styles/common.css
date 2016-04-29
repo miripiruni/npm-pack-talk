@@ -1,0 +1,190 @@
+.gray { font-style: italic; color: gray; }
+
+.slide {
+    padding-top: 74px;
+    }
+
+.slide:after {
+    background: none;
+    color: #000;
+    right: 20px;
+    top: auto;
+    bottom: 0;
+    display: none;
+    }
+
+.progress {
+    border-right: none;
+    border-color: silver;
+    }
+
+#cover.slide:after {
+    display: none;
+    }
+
+#cover {
+    background: #333;
+    }
+
+#cover h2 {
+    margin:30px 0 0;
+    padding: 0;
+    color:#FFF;
+    font-size:70px;
+    }
+
+#cover p {
+    margin:10px 0 0;
+    font-size:20px;
+    }
+
+#cover p.foot-note {
+    position: absolute;
+    bottom: 80px;
+    color: #777;
+    }
+
+#cover p a {
+    color:#FFF;
+    }
+
+.slide h2 {
+    color: #000;
+    background: #ffdb4d;
+    padding: 10px 20px 10px;
+    display: inline-block;
+    }
+
+.slide mark {
+    background: red;
+    color: #fff;
+    }
+
+.slide code {
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    }
+
+.slide h3 {
+    font-size: 1.5em;
+    color: #000;
+    display: inline-block;
+    }
+
+#cover h2 { color: #000; }
+
+.slide h2.red {
+    background: red;
+    color: #fff;
+    border-radius: 0.25em;
+    font-size: 3em;
+    padding-top: 5px;
+    box-shadow: 0 0 3px #999;
+        }
+
+.slide h2.shout {
+    background: #fff;
+    text-align: center;
+    }
+
+.slide .shout {
+    color: #000;
+    }
+
+.shout:after {
+    display: none;
+    }
+
+.pattern1 {
+    background: url(pictures/shards_pattern.jpg) center;
+    background-size: 100%;
+    }
+
+.img2 {
+    background: url(pictures/2.jpg) center;
+    background-size: 100%;
+    }
+
+.slide pre code {
+    line-height: 1.5em
+    }
+
+.slide pre code:not(:only-child):before {
+    display: none;
+    }
+
+.slide a {
+    background: none;
+    text-shadow: none;
+}
+
+.slide ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+.slide ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+.slide ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 3.5em;
+  font-size: 0.75em;
+}
+
+.slide li ol > li {
+  margin: 0;
+}
+
+.slide li ol > li:before {
+  content: counters(item, ".") ". ";
+}
+
+.slide ol ol {
+    margin-left: 0;
+    }
+
+.dir, .file {
+    padding-left: 25px;
+}
+
+.dir {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='16' width='14'><path d='M13 4H7v-1c0-0.66-0.31-1-1-1H1c-0.55 0-1 0.45-1 1v10c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V5c0-0.55-0.45-1-1-1z m-7 0H1v-1h5v1z'></path></svg>");
+
+}
+
+
+.baloon {
+    font-size: 0.8em;
+    position: absolute;
+    top: 0;
+    left: 60%;
+    width: 40%;
+    height: 100%;
+    background: silver;
+    padding: 7em 2em 2em;
+    }
+
+.slide a {
+    color: #000;
+    }
+
+.odo-updater {
+    background: white;
+    position: absolute;
+    top: 75%;
+    width: 100%;
+    height: 100px;
+}
+
+.odo-fix {
+    position: relative;
+    top: 5px;
+}
